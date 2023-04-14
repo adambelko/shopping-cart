@@ -1,3 +1,5 @@
+$white: #FFFFFF;
+$dark-blue: #0D345A;
 
 * {
   margin: 0;
@@ -6,11 +8,94 @@
 
 html {
   font-family: 'Roboto', sans-serif;
-  font-size: 62.5%;
+	align-items: center;
+	margin: 0 auto;
+  font-size: 16px;
+	width: 90%;
+	max-width: 1200px;
+	color: $dark-blue;
+	background: $white;
   box-sizing: border-box;
-  height: 100%;
 }
 
-body {
-  color: red;
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* Navbar */
+header {
+  display: flex;
+	flex-direction: column;
+	
+	.header__wrapper {
+		display: flex;
+		justify-content:space-between;
+		align-items: center;
+		margin: 1.5em 0em;
+
+		.header__title {
+			font-size: 1.8rem;
+			border: 0.2em solid $dark-blue;
+			padding: 0.3em 0.5em 0.3em 0em;
+
+				.title-left {
+					color: $white;
+					background-color: $dark-blue;
+					padding: 0.3em 0.5em;
+				}
+				
+				.title-right {
+					background: $white;
+					font-weight: 400;
+					padding-left: 0.3em;
+				}
+		}
+
+		.header__cart {
+			display: flex;
+			max-width: 3.3rem;
+			min-width: 3.3rem;
+			margin-left: 0.5em;
+
+			.cart-badge {
+				display: flex;
+				align-items: center;
+				font-size: 1.5rem;
+				padding-left: 0.3em;
+			}
+		}
+	}
+
+  nav {
+		margin: 0 auto;
+		
+		ul {
+			display: flex;
+			gap: 2em;
+			list-style: none;
+		}
+  }
+  
+  nav a {
+		color: $dark-blue;
+		text-decoration: none;
+		font-size: 1.6rem;
+		padding: 0.1em;
+
+		&:focus {
+			border-bottom: 0.15em solid $dark-blue;
+		}
+
+		&:hover {
+			transition: all 0.2s ease-in-out;
+			color: #4f88c0;
+		}
+  }
+}
+
+@media (min-width: 675px) {
+	html {
+		font-size: 18px;
+	}
 }
