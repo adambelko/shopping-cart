@@ -11,8 +11,8 @@ html {
 	align-items: center;
 	margin: 0 auto;
   font-size: 16px;
-	width: 90%;
-	max-width: 1200px;
+	width: 92%;
+	max-width: 1800px;
 	color: $dark-blue;
 	background: $white;
   box-sizing: border-box;
@@ -23,79 +23,69 @@ img {
 	display: block;
 }
 
-/* Navbar */
-header {
-  display: flex;
-	flex-direction: column;
-	
-	.header__wrapper {
-		display: flex;
-		justify-content:space-between;
-		align-items: center;
-		margin: 1.5em 0em;
+/* HEADER */
+.header__wrapper {
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	margin: 1.3em 0em;
 
-		.header__title {
-			font-size: 1.8rem;
-			border: 0.2em solid $dark-blue;
-			padding: 0.3em 0.5em 0.3em 0em;
+	.header__title {
+		font-size: 1.6rem;
+		border: 0.2em solid $dark-blue;
+		padding: 0.3em 0.3em 0.3em 0em;
 
-				.title-left {
-					color: $white;
-					background-color: $dark-blue;
-					padding: 0.3em 0.5em;
-				}
-				
-				.title-right {
-					background: $white;
-					font-weight: 400;
-					padding-left: 0.3em;
-				}
-		}
-
-		.header__cart {
-			display: flex;
-			max-width: 3.3rem;
-			min-width: 3.3rem;
-			margin-left: 0.5em;
-
-			.cart-badge {
-				display: flex;
-				align-items: center;
-				font-size: 1.5rem;
+			.title-left {
+				color: $white;
+				background-color: $dark-blue;
+				padding: 0.3em 0.5em;
+			}
+			.title-right {
+				background: $white;
+				font-weight: 400;
 				padding-left: 0.3em;
 			}
-		}
 	}
 
-  nav {
-		margin: 0 auto;
-		
-		ul {
+	.header__right {
+		display: flex;
+		align-items: center;
+		margin-left: 0.5em;
+		font-size: 1.4rem;
+
+		.header__cart-wrapper {
+			max-width: 2rem;
+			min-width: 2rem;
+			margin-left: 1em;
+		}
+		.header__cart-badge {
 			display: flex;
-			gap: 2em;
-			list-style: none;
+			align-items: center;
+			padding-left: 0.3em;
 		}
-  }
-  
-  nav a {
-		color: $dark-blue;
-		text-decoration: none;
-		font-size: 1.6rem;
-		padding: 0.1em;
+	}
+}
+	
+nav ul {
+	display: flex;
+	gap: 1em;
+	list-style: none;
+}
 
-		&:focus {
-			border-bottom: 0.15em solid $dark-blue;
-		}
+nav a {
+	color: $dark-blue;
+	text-decoration: none;
+	padding: 0.2em;
 
-		&:hover {
-			transition: all 0.2s ease-in-out;
-			color: #4f88c0;
-		}
-  }
+	&:focus {
+		border-bottom: 0.15em solid $dark-blue;
+	}
+
+	&:hover {
+		transition: all 0.2s ease-in-out;
+		color: #4f88c0;
+	}
 }
 
 @media (min-width: 675px) {
-	html {
-		font-size: 18px;
-	}
 }
