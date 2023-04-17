@@ -8,7 +8,7 @@ const Navlinks = (props) => {
                     <NavLink to="/">Home</NavLink>
                 </li>
                 <li onClick={() => props.isMobile && props.closeMobileMenu()}>
-                    <NavLink to="/Store">Store</NavLink>
+                    <NavLink to="/Store">Bookstore</NavLink>
                 </li>
                 <li onClick={() => props.isMobile && props.closeMobileMenu()}>
                     <NavLink to="/About">About</NavLink>

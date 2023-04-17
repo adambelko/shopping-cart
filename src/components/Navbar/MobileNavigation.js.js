@@ -1,14 +1,14 @@
-import Navlinks from "./Navlinks";
+import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdCloseCircleOutline } from "react-icons/io";
-import { useState } from "react";
+import Navlinks from "./Navlinks";
 
 const MobileNavigation = () => {
     const [openMenu, setOpenMenu] = useState(false);
 
     const hamburgerIcon = (
         <GiHamburgerMenu
-            className="hamburger-menu"
+            className="hamburger-menu-icon"
             size="30px"
             onClick={() => setOpenMenu(!openMenu)}
         />
@@ -16,7 +16,7 @@ const MobileNavigation = () => {
 
     const closeIcon = (
         <IoMdCloseCircleOutline
-            className="hamburger-menu"
+            className="close-menu-icon"
             size="30px"
             onClick={() => setOpenMenu(!openMenu)}
         />

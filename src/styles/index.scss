@@ -1,5 +1,6 @@
 $white: #FFFFFF;
 $dark-blue: #0D345A;
+$light-blue: #A9BFD6;
 
 * {
   margin: 0;
@@ -7,19 +8,18 @@ $dark-blue: #0D345A;
 }
 
 html {
-  font-family: 'Roboto', sans-serif;
-	// align-items: center;
+	font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 	color: $dark-blue;
 	background: $white;
   box-sizing: border-box;
+	box-shadow: -2px 11px 15px -12px rgba(0,0,0,0.65) inset;
 }
 
 header,
-body {
-		width: 92%;
-		max-width: 1800px;
-		margin: 0 auto;
+main {
+	width: 92%;
+	margin: 0 auto;
 }
 
 img {
@@ -27,19 +27,42 @@ img {
 	display: block;
 }
 
+nav {
+	ul {
+		list-style: none;
+		cursor: pointer;
+ }
+	
+	a {
+		color: $dark-blue;
+		text-decoration: none;
+		padding: 0.2em;
+		
+		&:focus {
+			color: $light-blue;
+		}
+		
+		&:hover {
+			transition: all 200ms ease-in-out;
+			color: $light-blue;
+		}
+	}
+}
+
+
 /* HEADER */
 .header__wrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 1.3em 0em;
-
+	padding-top: 2.2em;
+	
 	.header__title {
-		font-size: 1.6rem;
+		font-size: 1.2rem;
 		border: 0.2em solid $dark-blue;
-		padding: 0.3em 0.3em 0.3em 0em;
-
-			.title-left {
+		padding: 0.2em 0.5em 0.2em 0em;
+		
+		.title-left {
 				color: $white;
 				background-color: $dark-blue;
 				padding: 0.3em 0.5em;
@@ -47,27 +70,27 @@ img {
 			.title-right {
 				background: $white;
 				font-weight: 400;
-				padding-left: 0.3em;
+				padding-left: 0.5em;
 			}
 	}
 
-	.header__right {
+	.header__menu {
 		display: flex;
 		align-items: center;
 		margin-left: 0.5em;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
+
+		.navigation ul {
+			display: flex;
+			gap: 1em;
+		}
 
 		.header__cart-wrapper {
 			display: flex;
 			margin-left: 1em;
 			cursor: pointer;
-
-			img {
-				min-width: 30px;
-				max-width: 30px;
-			}
 			
-			.header__cart-badge {
+			.cart-badge {
 				display: flex;
 				align-items: center;
 				padding-left: 0.3em;
@@ -76,35 +99,15 @@ img {
 	}
 }
 
-nav ul {
-	list-style: none;
-	cursor: pointer;
-}
-
-nav a {
-	color: $dark-blue;
-	text-decoration: none;
-	padding: 0.2em;
-
-	&:focus {
-		border-bottom: 0.15em solid $dark-blue;
-	}
-
-	&:hover {
-		transition: all 200ms ease-in-out;
-		color: #4f88c0;
-	}
-}
-
-.navigation ul {
-	display: flex;
-	gap: 1em;
-}
-
 .mobile-navigation {
 	display: none;
-}
+}		
 
+
+/* MAIN */
+main {
+	margin-top: 2em;
+}
 
 
 /* MEDIA QUERY */
@@ -116,6 +119,11 @@ nav a {
 	.mobile-navigation {
 		display: flex;
 		flex-direction: row-reverse;
+
+		.hamburger-menu-icon,
+		.close-menu-icon {
+			margin-left: 1em;
+		}
 
 		ul {
 			display: flex;

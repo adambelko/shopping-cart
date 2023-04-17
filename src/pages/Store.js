@@ -1,8 +1,8 @@
 const Store = () => {
     return (
-        <main>
+        <div>
             <div>Some Store intems here</div>
-        </main>
+        </div>
     );
 };
 
