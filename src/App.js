@@ -4,12 +4,10 @@ import Main from "./components/Main";
 
 function App() {
     return (
-        <div>
-            <BrowserRouter>
-                <Header />
-                <Main />
-            </BrowserRouter>
-        </div>
+        <BrowserRouter>
+            <Header />
+            <Main />
+        </BrowserRouter>
     );
 }
 
