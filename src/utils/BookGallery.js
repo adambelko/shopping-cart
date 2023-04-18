@@ -31,7 +31,7 @@ const gallery = [
     {
         id: uuidv4(),
         img: HealingHerbs,
-        name: "Khalo",
+        name: "Healing Herbs",
         price: "24.95",
     },
     {

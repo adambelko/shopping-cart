@@ -54,32 +54,49 @@ nav {
 }
 
 
-.list {
-	display: flex;
-	li {
-		list-style: none;
-	}
-}
 /* BOOK COMPOMENT */
 .book-wrapper {
 	display: flex;
 	flex-direction: column;
 	font-family: "futura-pt", sans-serif;
 	text-align: center;
-	padding: 1em;
-	// width: 12%;
-
+	padding: 0.5em;
+	
 	.book-title {
 		margin-top: 0.8em;
 		margin-bottom: 0.2em;
+		cursor: pointer;
 	}
 
-	button {
-		color: $dark-blue;
+	.book-price,
+	img {
+		cursor: pointer;
+	}
+
+	.book-btn {
+		font-family: "futura-pt", sans-serif;
 		width: 100%;
 		margin-top: 0.8em;
 		padding: 0.5em;
+		border: none;
+		background-color: $dark-blue;
+		color: $dark-blue;
+		color: $white;
+		border: 3px solid $white;
+		opacity: 0%;
+		transition: all 200ms ease-in-out;
+		cursor: pointer;
+		&:hover {
+			color: $light-blue;
+		}
 	}
+	
+	&:hover {
+		button {
+			opacity: 100%;
+		}
+	}
+	
 }
 
 /* HEADER */
@@ -185,14 +202,26 @@ main {
 .home__gallery {
 	display: flex;
 	flex-direction: column;
+	position: relative;
 	background-color: $dark-blue;
 	color: $white;
 	margin-top: 8em;
 	margin-bottom: 2em;
 	min-height: 1500px;
 
-	.gallery-bestsellers {
+	ul {
 		display: flex;
+	}
+	
+	li {
+		list-style: none;
+	}
+	
+	.gallery-bestsellers {
+		width: 85%;
+		position: absolute;
+		top: -5.6em;
+		left: 7.5%;
 	}
 }
 
