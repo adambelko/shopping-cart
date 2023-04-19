@@ -1,0 +1,32 @@
+$white: #FFFFFF;
+$dark-blue: #0D345A;
+$light-blue: #A9BFD6;
+
+.navigation {
+	ul {
+		list-style: none;
+		cursor: pointer;
+	}
+
+	a {
+		color: $dark-blue;
+		text-decoration: none;
+		padding: 0.2em;
+		
+		transition: all 200ms ease-in-out;
+		&:focus {
+			color: $light-blue;
+		}
+		
+		&:hover {
+			color: $light-blue;
+		}
+	}
+}
+
+@media (max-width: 675px) { 
+    
+    .navigation {
+        display: none;
+    }
+}

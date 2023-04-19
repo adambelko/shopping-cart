@@ -1,0 +1,46 @@
+$white: #FFFFFF;
+$dark-blue: #0D345A;
+$light-blue: #A9BFD6;
+
+.book {
+	display: flex;
+	flex-direction: column;
+	font-family: "futura-pt", sans-serif;
+	text-align: center;
+	padding: 0.5em;
+	
+	.book-title {
+		margin-top: 0.8em;
+		margin-bottom: 0.2em;
+		cursor: pointer;
+	}
+
+	.book-price,
+	.book-img {
+		cursor: pointer;
+	}
+
+	.book-btn {
+		font-family: "futura-pt", sans-serif;
+		width: 100%;
+		margin-top: 0.8em;
+		padding: 0.5em;
+		border: none;
+		background-color: $dark-blue;
+		color: $dark-blue;
+		color: $white;
+		border: 3px solid $white;
+		opacity: 0%;
+		transition: all 250ms ease-in-out;
+		cursor: pointer;
+		&:hover {
+			color: $light-blue;
+		}
+	}
+	
+	&:hover {
+		.book-btn {
+			opacity: 100%;
+		}
+	}
+}

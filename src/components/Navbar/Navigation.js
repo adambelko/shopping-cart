@@ -1,3 +1,4 @@
+import "../../styles/Navigation.scss";
 import Navlinks from "./Navlinks";
 
 const Navigation = () => {

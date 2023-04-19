@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Store from "../pages/Store";
+import Bookstore from "../pages/Bookstore";
 import About from "../pages/About";
 import Home from "../pages/Home";
 
@@ -8,7 +8,7 @@ const Main = () => {
         <main>
             <Routes>
                 <Route index element={<Home />} />
-                <Route path="/Store" element={<Store />} />
+                <Route path="/Bookstore" element={<Bookstore />} />
                 <Route path="/About" element={<About />} />
             </Routes>
         </main>

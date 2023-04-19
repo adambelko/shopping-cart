@@ -2,15 +2,15 @@ import "../styles/Footer.scss";
 
 const Footer = () => {
     return (
-        <footer>
-            <div className="column-wrapper">
+        <footer className="footer">
+            <div className="footer__column-wrapper">
                 <div className="column">
                     <p>Book Addicts</p>
                     <p></p>
-                    <p>115 Oaks Avenue</p>
+                    <p>236 Oaks Avenue</p>
                     <p>Dee Why 2099</p>
                     <p>NSW, Australia</p>
-                    <p>info@bookaddicts.com</p>
+                    <p>info@bookaddicts.com.au</p>
                 </div>
                 <div className="column links">
                     <span>Shop</span>
@@ -18,10 +18,10 @@ const Footer = () => {
                     <p>FAQ</p>
                     <p>Shipping & Returns</p>
                     <p>Store Policy</p>
-                    <p>Payments Methods</p>
+                    <p>Payment Methods</p>
                 </div>
                 <div className="column links">
-                    <p>Socials</p>
+                    <span>Socials</span>
                     <p></p>
                     <p>Facebook</p>
                     <p>Twitter</p>
@@ -29,8 +29,8 @@ const Footer = () => {
                     <p>Pinterest</p>
                 </div>
             </div>
-            <div className="author">
-                Created by Adam Belko March 2023.
+            <div className="footer__author">
+                Created by Adam Belko March 2023
                 <a href="https://github.com/adambelko/shopping-cart">
                     GitHub Repo
                 </a>

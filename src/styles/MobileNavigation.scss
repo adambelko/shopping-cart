@@ -1,0 +1,30 @@
+.mobile-navigation {
+    display: none;
+}	
+
+/* MEDIA QUERRY */
+@media (max-width: 675px) { 
+
+    .mobile-navigation {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .mobile-navigation__menu-icon,
+        .mobile-navigation__close-menu-icon {
+            margin-left: 1em;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            align-items: center;
+            width: 100%;
+            gap: 1em;
+            top: 3.5em;
+            right: 0;
+            padding: 1em 0;
+            background: rgb(215, 215, 215);
+        }
+    }
+}

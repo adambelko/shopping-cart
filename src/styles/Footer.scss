@@ -2,7 +2,7 @@ $white: #FFFFFF;
 $dark-blue: #0D345A;
 $light-blue: #A9BFD6;
 
-footer {
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,9 +11,8 @@ footer {
     color: white;
     background: $dark-blue;
 
-    .column-wrapper {
+    &__column-wrapper {
         display: flex;
-        justify-content: space-between;
         gap: 10em;
 
         .column {
@@ -22,12 +21,12 @@ footer {
             gap: 1.2em;
         }
 
-        .links p{
+        .links p {
             cursor: pointer;
         }
     }
 
-    .author {
+    &__author {
         display: flex;
         flex-direction: column;
         text-align: center;

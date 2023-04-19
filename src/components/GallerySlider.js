@@ -3,7 +3,7 @@ import Book from "./Book";
 const GallerySlider = ({ gallery }) => {
     return (
         <div>
-            <ul className="list">
+            <ul>
                 {gallery.map((book) => {
                     return (
                         <li key={book.id}>

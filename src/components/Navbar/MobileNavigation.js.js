@@ -1,3 +1,4 @@
+import "../../styles/MobileNavigation.scss";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdCloseCircleOutline } from "react-icons/io";
@@ -6,9 +7,9 @@ import Navlinks from "./Navlinks";
 const MobileNavigation = () => {
     const [openMenu, setOpenMenu] = useState(false);
 
-    const hamburgerIcon = (
+    const menuIcon = (
         <GiHamburgerMenu
-            className="hamburger-menu-icon"
+            className="mobile-navigation__menu-icon"
             size="30px"
             onClick={() => setOpenMenu(!openMenu)}
         />
@@ -16,7 +17,7 @@ const MobileNavigation = () => {
 
     const closeIcon = (
         <IoMdCloseCircleOutline
-            className="close-menu-icon"
+            className="mobile-navigation__close-menu-icon"
             size="30px"
             onClick={() => setOpenMenu(!openMenu)}
         />
@@ -26,7 +27,7 @@ const MobileNavigation = () => {
 
     return (
         <nav className="mobile-navigation">
-            {openMenu ? closeIcon : hamburgerIcon}
+            {openMenu ? closeIcon : menuIcon}
             {openMenu && (
                 <Navlinks isMobile={true} closeMobileMenu={closeMobileMenu} />
             )}

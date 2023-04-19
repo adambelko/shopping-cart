@@ -1,0 +1,158 @@
+$white: #FFFFFF;
+$dark-blue: #0D345A;
+$light-blue: #A9BFD6;
+
+/* HOME PAGE */
+.home__img-wrapper {
+	position: relative;
+	font-size: 4rem;
+	
+	.home__wrapper {
+		display: flex;
+		align-items: center;
+		
+		.home__sofa-img {
+			background-color: yellow;
+			height: 524px;
+			object-fit: cover;
+		}
+
+		.home__text-img-overlay {
+			display: flex;
+			position: absolute;
+			padding-left: 0.7em;
+		}
+	}
+}
+
+.gallery__title,
+.title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 5em;
+	gap: 0.3em;
+
+	span {
+		font-size: 1.5rem;
+		font-family: "futura-pt", sans-serif;
+	}
+
+	h2 {
+		font-size: 2.8rem;
+	}
+}
+
+.gallery__wrapper {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background-color: $dark-blue;
+	color: $white;
+	margin-top: 8em;
+
+	ul {
+		display: flex;
+		list-style: none;
+	}
+	
+	.gallery__bestsellers-wrapper{
+		display: flex;
+		margin-bottom: 8em;
+		position: relative;
+		margin-bottom: 14%;
+
+		.gallery__bestsellers {
+			width: 85%;
+			position: absolute;
+			top: -5.6em;
+			left: 7.5%;
+		}
+	}
+
+    .gallery-recommended {
+        width: 85%;
+        margin: 0 auto;
+        margin-top: 3em;
+    }
+
+    .gallery-outro {
+        display: flex;
+        flex-direction: column;
+    
+        h2 {
+            font-size: 4.6rem;
+            text-align: center;
+        }
+    
+        button {
+            margin-top: 3em;
+            margin-bottom: 3.5em;
+            padding: 0.8em 2em;
+            border: 3px solid $white;
+            background-color: $dark-blue;
+            transition: all 250ms ease-in-out;
+    
+            a {
+                color: $white;
+                text-decoration: none;
+                font-size: 1.1rem;
+            }
+        }
+    
+        button:hover {
+            background-color: $white;
+
+            a {
+                color: $dark-blue;
+            }
+        }
+    }
+}
+
+.book-launch {
+	margin-top: 3em;
+
+    .book-launch__title {
+        margin-bottom: 3em;
+    }
+
+    .book-launch-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 5em;
+        margin-bottom: 5em;
+    
+        .book-launch-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3em;
+        }
+    
+        .book-launch-img {
+            border: 15px solid $dark-blue;
+        }
+    }
+}
+
+
+/* MEDIA QUERY */
+@media (max-width: 675px) {
+    .home__img-wrapper{
+        font-size: 1.6rem;
+
+        .sofa-img{
+            height: 350px;
+            object-fit: cover;
+        }
+    }
+
+    .home__bestsellers-title-wrapper {
+        margin-top: 3em;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+}
