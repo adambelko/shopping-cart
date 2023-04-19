@@ -1,0 +1,47 @@
+$white: #FFFFFF;
+$dark-blue: #0D345A;
+$light-blue: #A9BFD6;
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+    color: white;
+    background: $dark-blue;
+
+    .column-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 10em;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2em;
+        }
+
+        .links p{
+            cursor: pointer;
+        }
+    }
+
+    .author {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 3em;
+        gap: 0.7em;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                color: $light-blue;
+            }
+        }
+    }
+}

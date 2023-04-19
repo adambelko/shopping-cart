@@ -37,7 +37,7 @@ const gallery = [
     {
         id: uuidv4(),
         img: HikingInTheAlps,
-        name: "Hiking In The Alps",
+        name: "Hiking in the Alps",
         price: "19.95",
     },
     {
