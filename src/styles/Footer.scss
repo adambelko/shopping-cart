@@ -5,8 +5,10 @@ $light-blue: #A9BFD6;
 .footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     padding: 4em;
     color: white;
     background: $dark-blue;
