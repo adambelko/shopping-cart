@@ -5,13 +5,15 @@ $light-blue: #A9BFD6;
 .footer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    padding: 4em;
+    align-items: center;
+    margin: auto;
+    // position: absolute;
+    // bottom: 0;
+    padding: 3em 0;
     color: white;
     background: $dark-blue;
+	font-family: "futura-pt", sans-serif;
 
     &__column-wrapper {
         display: flex;
@@ -20,7 +22,7 @@ $light-blue: #A9BFD6;
         .column {
             display: flex;
             flex-direction: column;
-            gap: 1.2em;
+            gap: 1em;
         }
 
         .links p {

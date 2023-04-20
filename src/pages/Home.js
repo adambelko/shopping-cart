@@ -16,7 +16,6 @@ const Home = () => {
                             <br />A GOOD
                             <br /> BOOK,
                             <br />
-                            AND YOU.
                         </span>
                     </h2>
                 </div>

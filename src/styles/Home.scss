@@ -2,7 +2,6 @@ $white: #FFFFFF;
 $dark-blue: #0D345A;
 $light-blue: #A9BFD6;
 
-/* HOME PAGE */
 .home__img-wrapper {
 	position: relative;
 	font-size: 4rem;
@@ -22,24 +21,6 @@ $light-blue: #A9BFD6;
 			position: absolute;
 			padding-left: 0.7em;
 		}
-	}
-}
-
-.gallery__title,
-.title {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 5em;
-	gap: 0.3em;
-
-	span {
-		font-size: 1.5rem;
-		font-family: "futura-pt", sans-serif;
-	}
-
-	h2 {
-		font-size: 2.8rem;
 	}
 }
 
@@ -112,6 +93,7 @@ $light-blue: #A9BFD6;
 
 .book-launch {
 	margin-top: 3em;
+    margin-bottom: 5em;
 
     .book-launch__title {
         margin-bottom: 3em;
@@ -121,7 +103,6 @@ $light-blue: #A9BFD6;
         display: flex;
         justify-content: center;
         gap: 5em;
-        margin-bottom: 5em;
     
         .book-launch-info {
             display: flex;
@@ -135,6 +116,7 @@ $light-blue: #A9BFD6;
         }
     }
 }
+
 
 
 /* MEDIA QUERY */
