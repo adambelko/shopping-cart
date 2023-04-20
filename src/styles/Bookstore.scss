@@ -1,0 +1,39 @@
+.store__title {
+    margin-top: 3em;
+}
+
+.store__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3em;
+    margin-top: 3em;
+
+    .store__col1 {
+        min-width: 200px;
+        padding: 0.5em 2em 0 2em;
+        
+        .store__filter-text {
+            font-family: "futura-pt", sans-serif;
+            font-size: 1.7rem;
+        }
+        .store__filter-slider {
+            width: 100%;
+        }
+
+        .store__filter-price-range {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        hr {
+            margin: 1em 0;
+            background-color: #D0D6DE;
+        }
+    }
+
+    .store__col2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1em;
+    }
+}
