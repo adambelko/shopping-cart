@@ -1,5 +1,5 @@
 import "../styles/Bookstore.scss";
-import gallery from "../utils/BookGallery";
+import data from "../data/data";
 import Book from "../components/Book";
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ const Bookstore = () => {
         setPrice(e.target.value);
     };
 
-    const bookList = gallery.filter((book) => book.price < price);
+    const bookList = data.filter((book) => book.price < price);
 
     return (
         <div className="store">
@@ -40,6 +40,7 @@ const Bookstore = () => {
                     {bookList.map((book) => {
                         return (
                             <Book
+                                id={book.id}
                                 key={book.id}
                                 source={book.img}
                                 altName={book.name}

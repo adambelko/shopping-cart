@@ -8,10 +8,10 @@ const Navlinks = (props) => {
                     <NavLink to="/">Home</NavLink>
                 </li>
                 <li onClick={() => props.isMobile && props.closeMobileMenu()}>
-                    <NavLink to="/Bookstore">Bookstore</NavLink>
+                    <NavLink to="/bookstore">Bookstore</NavLink>
                 </li>
                 <li onClick={() => props.isMobile && props.closeMobileMenu()}>
-                    <NavLink to="/About">About</NavLink>
+                    <NavLink to="/about">About</NavLink>
                 </li>
             </ul>
         </div>

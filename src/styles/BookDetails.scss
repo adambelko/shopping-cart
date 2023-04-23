@@ -1,0 +1,103 @@
+$white: #FFFFFF;
+$dark-blue: #0D345A;
+
+.book-details {
+    font-family: "futura-pt", sans-serif;
+    max-width: 890px;
+    margin: 5em auto;
+    padding: 0 3em 0 3em;
+
+    &__breadcrumbs {
+        margin-bottom: 3em;
+        color: #7C8DA1;
+        a {
+            text-decoration: none;
+            color: $dark-blue;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 2.5em;
+
+        .book-details__col1 {
+            display: flex;
+            flex-direction: column;
+            gap: 3em;
+            max-width: 500px;
+        }
+
+        .book-details__col2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 355px;
+        }
+    }
+}
+
+.book-details__col2 {
+    max-height: 500px;
+
+    .book-details__top{
+        .book-details__title{
+            font-size: 2rem;
+        }
+        
+        .book-details__price {
+            font-size: 1.8rem;
+        }
+    
+        .book-details__price {
+            font-size: 1.5rem;
+            margin-top: 0.5em;
+        }
+    }
+
+    .book-details__bottom {
+        display: flex;
+        flex-direction: column;
+        .book-details__quantity {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4em;
+            margin-top: 2em;
+            width: 60px;
+            
+            input {
+                font-size: 1rem;
+                padding-left: 10px;
+                height: 30px;
+            }
+        }
+    
+        .book-details__add-btn,
+        .book-details__buy-btn {
+            font-size: 1.1rem;
+            padding: 0.5em;
+            color: $white;
+            transition: all 200ms ease-in-out;
+            border-style: none;
+        }
+    
+    
+        .book-details__add-btn {
+            background-color: $dark-blue;
+            margin-top: 1.5em;
+    
+            &:hover {
+                background-color: #647790;
+            }
+        }
+    
+        .book-details__buy-btn {
+            margin-top: 0.8em;
+            background-color: #414141;
+            &:hover {
+                background-color: #7F7F7F;
+            }
+        }
+    }
+
+}
+

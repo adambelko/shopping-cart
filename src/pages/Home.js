@@ -2,7 +2,7 @@ import "../styles/Home.scss";
 import sofa from "../assets/images/sofa.webp";
 import Ailoo from "../assets/images/Books/Ailoo.webp";
 import GallerySlider from "../components/GallerySlider";
-import gallery from "../utils/BookGallery";
+import data from "../data/data";
 
 const Home = () => {
     return (
@@ -30,7 +30,7 @@ const Home = () => {
                 <div className="gallery__wrapper">
                     <div className="gallery__bestsellers-wrapper">
                         <div className="gallery__bestsellers">
-                            <GallerySlider gallery={gallery} />
+                            <GallerySlider gallery={data} />
                         </div>
                     </div>
                     <div className="gallery__title title recommended-books">
@@ -38,7 +38,7 @@ const Home = () => {
                         <h2>RECOMMENDED BOOKS</h2>
                     </div>
                     <div className="gallery-recommended">
-                        <GallerySlider gallery={gallery} />
+                        <GallerySlider gallery={data} />
                     </div>
                     <div className="gallery__title title gallery-outro">
                         <h2>

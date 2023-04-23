@@ -2,6 +2,10 @@ $white: #FFFFFF;
 $dark-blue: #0D345A;
 $light-blue: #A9BFD6;
 
+.home {
+    margin-top: 2em;
+}
+
 .home__img-wrapper {
 	position: relative;
 	font-size: 4rem;
@@ -48,6 +52,10 @@ $light-blue: #A9BFD6;
 			position: absolute;
 			top: -5.6em;
 			left: 7.5%;
+            a {
+                text-decoration: none;
+                color: $white;
+            }
 		}
 	}
 
@@ -55,6 +63,11 @@ $light-blue: #A9BFD6;
         width: 85%;
         margin: 0 auto;
         margin-top: 3em;
+
+        a {
+            text-decoration: none;
+            color: $white;
+        }
     }
 
     .gallery-outro {
