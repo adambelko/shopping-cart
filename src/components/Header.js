@@ -2,15 +2,18 @@ import Navigation from "./Navbar/Navigation";
 import MobileNavigation from "./Navbar/MobileNavigation.js";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import "../styles/Header.scss";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
         <header>
             <div className="header__wrapper">
-                <h1 className="header__title">
-                    <span className="title-left">BOOK</span>
-                    <span className="title-right">ADDICTS</span>
-                </h1>
+                <Link to="/">
+                    <h1 className="header__title">
+                        <span className="title-left">PAGE</span>
+                        <span className="title-right">TURNERS</span>
+                    </h1>
+                </Link>
                 <div className="header__menu">
                     <Navigation />
                     <div className="header__cart-wrapper">

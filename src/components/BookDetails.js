@@ -1,5 +1,5 @@
 import "../styles/BookDetails.scss";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import data from "../data/data";
 
@@ -31,6 +31,15 @@ const BookDetails = () => {
                                     </h1>
                                     <span className="book-details__price">
                                         ${book.price}
+                                    </span>
+                                    <span className="book-details__author">
+                                        By {book.author}
+                                    </span>
+                                    <span className="book-details__published">
+                                        Published: 5th April 2023
+                                    </span>
+                                    <span className="book-details__isbn">
+                                        ISBN: 9780008581435
                                     </span>
                                 </div>
                                 <div className="book-details__bottom">

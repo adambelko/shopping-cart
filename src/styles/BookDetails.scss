@@ -32,31 +32,39 @@ $dark-blue: #0D345A;
             flex-direction: column;
             justify-content: space-between;
             width: 355px;
+            max-height: 500px;
         }
     }
 }
 
 .book-details__col2 {
-    max-height: 500px;
+    .book-details__top {
+        display: flex;
+        flex-direction: column;
 
-    .book-details__top{
         .book-details__title{
             font-size: 2rem;
         }
-        
+                
         .book-details__price {
             font-size: 1.8rem;
+            margin-top: 0.6em;
         }
-    
-        .book-details__price {
-            font-size: 1.5rem;
-            margin-top: 0.5em;
+
+        .book-details__author {
+            font-size: 1.2rem;
+            margin-top: 0.8em;
+        }
+
+        .book-details__published {
+            margin-top: 2em;
         }
     }
 
     .book-details__bottom {
         display: flex;
         flex-direction: column;
+
         .book-details__quantity {
             display: flex;
             flex-direction: column;

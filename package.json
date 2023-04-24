@@ -11,6 +11,7 @@
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
+    "react-slidy": "^4.3.3",
     "sass": "^1.62.0",
     "short-uuid": "^4.2.2",
     "uuid": "^9.0.0",

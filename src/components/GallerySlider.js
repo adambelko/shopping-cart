@@ -1,22 +1,24 @@
+import ReactSlidy from "react-slidy";
+import "react-slidy/lib/index.scss";
+
 import Book from "./Book";
 
 const GallerySlider = ({ gallery }) => {
     return (
         <div>
-            <ul>
+            <ReactSlidy numOfSlides={6}>
                 {gallery.map((book) => {
                     return (
-                        <li key={book.id}>
-                            <Book
-                                source={book.img}
-                                altName={book.name}
-                                bookName={book.name}
-                                bookPrice={book.price}
-                            />
-                        </li>
+                        <Book
+                            key={book.id}
+                            source={book.img}
+                            altName={book.name}
+                            bookName={book.name}
+                            bookPrice={book.price}
+                        />
                     );
                 })}
-            </ul>
+            </ReactSlidy>
         </div>
     );
 };
