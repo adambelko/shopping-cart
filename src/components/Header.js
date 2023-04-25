@@ -4,7 +4,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import "../styles/Header.scss";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ scrollDown }) => {
     return (
         <header>
             <div className="header__wrapper">
@@ -15,7 +15,7 @@ const Header = () => {
                     </h1>
                 </Link>
                 <div className="header__menu">
-                    <Navigation />
+                    <Navigation scrollDown={scrollDown} />
                     <div className="header__cart-wrapper">
                         <MdOutlineShoppingCart size="30px" />
                         <div className="cart-badge">1</div>

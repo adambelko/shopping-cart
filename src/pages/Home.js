@@ -1,10 +1,10 @@
 import "../styles/Home.scss";
 import sofa from "../assets/images/sofa.webp";
-import Ailoo from "../assets/images/Books/Ailoo.webp";
+import ailoo from "../assets/images/Books/Ailoo.webp";
 import GallerySlider from "../components/GallerySlider";
 import data from "../data/data";
 
-const Home = () => {
+const Home = ({ events }) => {
     return (
         <div className="home">
             <section className="home__img-wrapper">
@@ -52,7 +52,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="book-launch">
+            <section className="book-launch" ref={events}>
                 <div className="book-launch__title title">
                     <span>Coming Up</span>
                     <h2>BOOK LAUNCH</h2>
@@ -68,7 +68,7 @@ const Home = () => {
                             186 Clarence Street, Sydney CBD, NSW, Australia
                         </span>
                     </div>
-                    <img src={Ailoo} alt="Ailoo" className="book-launch-img" />
+                    <img src={ailoo} alt="Ailoo" className="book-launch-img" />
                 </div>
             </section>
         </div>

@@ -1,10 +1,10 @@
 import "../../styles/Navigation.scss";
 import Navlinks from "./Navlinks";
 
-const Navigation = () => {
+const Navigation = ({ scrollDown }) => {
     return (
         <nav className="navigation">
-            <Navlinks />
+            <Navlinks scrollDown={scrollDown} />
         </nav>
     );
 };

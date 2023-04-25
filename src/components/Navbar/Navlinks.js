@@ -7,6 +7,14 @@ const Navlinks = (props) => {
                 <li onClick={() => props.isMobile && props.closeMobileMenu()}>
                     <NavLink to="/">Home</NavLink>
                 </li>
+                <li
+                    onClick={() => {
+                        props.isMobile && props.closeMobileMenu();
+                        props.scrollDown();
+                    }}
+                >
+                    <NavLink to="/events">Events</NavLink>
+                </li>
                 <li onClick={() => props.isMobile && props.closeMobileMenu()}>
                     <NavLink to="/bookstore">Bookstore</NavLink>
                 </li>
