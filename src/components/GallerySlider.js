@@ -1,15 +1,24 @@
-import ReactSlidy from "react-slidy";
-import "react-slidy/lib/index.scss";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Book from "./Book";
 
 const GallerySlider = ({ gallery }) => {
+    const settings = {
+        infinite: true,
+        slidesToShow: 6,
+        speed: 500,
+    };
+
+    const shuffeledGallery = gallery.sort(() => 0.5 - Math.random());
+
     return (
         <div>
-            <ReactSlidy numOfSlides={6}>
-                {gallery.map((book) => {
+            <Slider {...settings}>
+                {shuffeledGallery.map((book) => {
                     return (
                         <Book
+                            id={book.id}
                             key={book.id}
                             source={book.img}
                             altName={book.name}
@@ -18,7 +27,7 @@ const GallerySlider = ({ gallery }) => {
                         />
                     );
                 })}
-            </ReactSlidy>
+            </Slider>
         </div>
     );
 };

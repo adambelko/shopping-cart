@@ -41,10 +41,6 @@ $light-blue: #A9BFD6;
         width: 80%;
         border: 3px solid white;
     }
-	// ul {
-        // 	display: flex;
-        // 	list-style: none;
-        // }
         
         .gallery__bestsellers-wrapper{
             display: flex;
@@ -53,7 +49,6 @@ $light-blue: #A9BFD6;
             margin-bottom: 14%;
             
             .gallery__bestsellers {
-            border: 3px solid white;
 			width: 85%;
 			position: absolute;
 			top: -5.6em;

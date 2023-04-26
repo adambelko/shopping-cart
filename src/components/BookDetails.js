@@ -1,12 +1,10 @@
 import "../styles/BookDetails.scss";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import data from "../data/data";
 
 const BookDetails = () => {
     const { id } = useParams();
-    const { state } = useLocation();
-    console.log(state);
 
     const bookInfo = data.filter((book) => book.id === id);
 
@@ -46,10 +44,12 @@ const BookDetails = () => {
                                 </div>
                                 <div className="book-details__bottom">
                                     <div className="book-details__quantity">
-                                        <label for="quantity">Quantity</label>
+                                        <label htmlFor="quantity">
+                                            Quantity
+                                        </label>
                                         <input
                                             type="number"
-                                            value="1"
+                                            defaultValue="1"
                                             id="quantity"
                                         />
                                     </div>

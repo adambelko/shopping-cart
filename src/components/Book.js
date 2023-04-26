@@ -4,7 +4,7 @@ import "../styles/Book.scss";
 const Book = ({ id, source, altName, bookName, bookPrice }) => {
     return (
         <div className="book">
-            <Link to={id} state={bookName}>
+            <Link to={"/bookstore/" + id}>
                 <img className="book-img" src={source} alt={altName} />
                 <span className="book-title">{bookName}</span>
                 <span className="book-price">{bookPrice}</span>
