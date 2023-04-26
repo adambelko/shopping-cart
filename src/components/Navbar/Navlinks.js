@@ -10,7 +10,9 @@ const Navlinks = (props) => {
                 <li
                     onClick={() => {
                         props.isMobile && props.closeMobileMenu();
-                        props.scrollDown();
+                        setTimeout(() => {
+                            props.scrollDown();
+                        }, 0);
                     }}
                 >
                     <NavLink to="/events">Events</NavLink>
