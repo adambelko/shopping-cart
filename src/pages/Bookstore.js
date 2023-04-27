@@ -1,16 +1,28 @@
-import "../styles/Bookstore.scss";
-import data from "../data/data";
-import Book from "../components/Book";
 import { useState } from "react";
+import data from "../data/data";
+
+import Book from "../components/Book";
+import FilterItems from "../components/FilterItems";
+
+import "../styles/Bookstore.scss";
 
 const Bookstore = () => {
-    const [price, setPrice] = useState(25);
+    const [filterResult, setFilterResult] = useState([]);
 
-    const onSliderChange = (e) => {
-        setPrice(e.target.value);
+    const [{ min, max }, setRangeValues] = useState({ min: "", max: "" });
+    const [searchText, setSearchText] = useState("");
+
+    const filteredData = data.filter((book) => {
+        if (searchText === "") return data;
+        return book.title.toLowerCase().includes(searchText);
+    });
+
+    const handleChange = ({ target: { name, value } }) => {
+        setRangeValues((prevState) => ({
+            ...prevState,
+            [name]: value,
+        }));
     };
-
-    const bookList = data.filter((book) => book.price < price);
 
     return (
         <div className="store">
@@ -20,31 +32,23 @@ const Bookstore = () => {
             </div>
             <div className="store__wrapper">
                 <div className="store__col1">
-                    <div className="store__filter-text">Filter by price</div>
-                    <hr />
-                    <input
-                        type="range"
-                        min="0"
-                        max="50"
-                        value={price}
-                        className="store__filter-slider"
-                        onChange={onSliderChange}
+                    <FilterItems
+                        searchText={searchText}
+                        setSearchText={setSearchText}
+                        handleChange={handleChange}
+                        min={min}
+                        max={max}
                     />
-                    <div className="store__filter-price-range">
-                        <div className="store__filter-price-start">$0</div>
-                        <div className="store__filter-price-end">{price}</div>
-                    </div>
-                    <hr />
                 </div>
                 <div className="store__col2">
-                    {bookList.map((book) => {
+                    {filteredData.map((book) => {
                         return (
                             <Book
                                 id={book.id}
                                 key={book.id}
                                 source={book.img}
-                                altName={book.name}
-                                bookName={book.name}
+                                altName={book.title}
+                                bookTitle={book.title}
                                 bookPrice={book.price}
                             />
                         );
