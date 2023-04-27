@@ -1,5 +1,5 @@
-import "../styles/About.scss";
 import AboutPageImg from "../assets/images/AboutPageImg.webp";
+import "../styles/About.scss";
 
 const About = () => {
     return (

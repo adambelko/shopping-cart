@@ -11,24 +11,6 @@
     .store__col1 {
         min-width: 200px;
         padding: 0.5em 2em 0 2em;
-        
-        .store__filter-text {
-            font-family: "futura-pt", sans-serif;
-            font-size: 1.7rem;
-        }
-        .store__filter-slider {
-            width: 100%;
-        }
-
-        .store__filter-price-range {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        hr {
-            margin: 1em 0;
-            background-color: #D0D6DE;
-        }
     }
 
     .store__col2 {

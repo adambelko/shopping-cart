@@ -1,8 +1,9 @@
-import "../../styles/MobileNavigation.scss";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import Navlinks from "./Navlinks";
+
+import "../../styles/MobileNavigation.scss";
 
 const MobileNavigation = () => {
     const [openMenu, setOpenMenu] = useState(false);

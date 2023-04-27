@@ -1,8 +1,10 @@
-import "../styles/Home.scss";
+import data from "../data/data";
 import sofa from "../assets/images/sofa.webp";
 import ailoo from "../assets/images/Books/Ailoo.webp";
+
 import GallerySlider from "../components/GallerySlider";
-import data from "../data/data";
+
+import "../styles/Home.scss";
 
 const Home = ({ events }) => {
     return (

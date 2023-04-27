@@ -1,5 +1,5 @@
-import "../../styles/Navigation.scss";
 import Navlinks from "./Navlinks";
+import "../../styles/Navigation.scss";
 
 const Navigation = ({ scrollDown }) => {
     return (

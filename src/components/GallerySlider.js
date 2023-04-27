@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import Book from "./Book";
 
 const GallerySlider = ({ gallery }) => {
@@ -21,8 +22,8 @@ const GallerySlider = ({ gallery }) => {
                             id={book.id}
                             key={book.id}
                             source={book.img}
-                            altName={book.name}
-                            bookName={book.name}
+                            altName={book.title}
+                            bookTitle={book.title}
                             bookPrice={book.price}
                         />
                     );

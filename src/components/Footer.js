@@ -5,12 +5,12 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer__column-wrapper">
                 <div className="column">
-                    <p>Book Addicts</p>
+                    <p>PAGE TURNERS</p>
                     <p></p>
                     <p>236 Oaks Avenue</p>
                     <p>Dee Why 2099</p>
                     <p>NSW, Australia</p>
-                    <p>info@bookaddicts.com.au</p>
+                    <p>info@pageturners.com.au</p>
                 </div>
                 <div className="column links">
                     <span>Shop</span>

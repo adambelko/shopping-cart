@@ -1,10 +1,11 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
+
 import Home from "../pages/Home";
 import Bookstore from "../pages/Bookstore";
 import About from "../pages/About";
 import NotFound from "./NotFound";
 import BookDetails from "./BookDetails";
-import ScrollToTop from "react-scroll-to-top";
 
 const Main = ({ events }) => {
     return (
@@ -12,7 +13,7 @@ const Main = ({ events }) => {
             <ScrollToTop smooth={true} />
             <Routes>
                 <Route path="/">
-                    <Route index element={<Home events={events} />} />
+                    <Route index element={<Home />} />
                     <Route path="/events" element={<Home events={events} />} />
                 </Route>
                 <Route path="/bookstore">

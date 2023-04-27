@@ -1,8 +1,10 @@
-import Navigation from "./Navbar/Navigation";
-import MobileNavigation from "./Navbar/MobileNavigation.js";
-import { MdOutlineShoppingCart } from "react-icons/md";
-import "../styles/Header.scss";
 import { Link } from "react-router-dom";
+import { MdOutlineShoppingCart } from "react-icons/md";
+
+import MobileNavigation from "./Navbar/MobileNavigation.js";
+import Navigation from "./Navbar/Navigation";
+
+import "../styles/Header.scss";
 
 const Header = ({ scrollDown }) => {
     return (

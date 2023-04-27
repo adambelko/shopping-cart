@@ -1,7 +1,8 @@
-import "../styles/BookDetails.scss";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import data from "../data/data";
+
+import "../styles/BookDetails.scss";
 
 const BookDetails = () => {
     const { id } = useParams();
