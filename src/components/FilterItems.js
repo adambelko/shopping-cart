@@ -55,12 +55,11 @@ const FilterItems = (props) => {
                     <label htmlFor="store__search-input"></label>
                     <input
                         type="search"
+                        name="searchText"
                         id="store__search-input"
                         placeholder="Search..."
                         value={props.filterText}
-                        onChange={(e) =>
-                            props.setSearchText(e.target.value.toLowerCase())
-                        }
+                        onChange={props.handleChange}
                     />
                 </div>
             )}

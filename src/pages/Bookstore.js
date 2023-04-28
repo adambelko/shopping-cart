@@ -7,45 +7,42 @@ import FilterItems from "../components/FilterItems";
 import "../styles/Bookstore.scss";
 
 const Bookstore = () => {
-    const [filterResult, setFilterResult] = useState(data);
-
-    const [{ min, max }, setRangeValues] = useState({ min: "", max: "" });
-    const [searchText, setSearchText] = useState("");
+    const [filters, setFilters] = useState({
+        min: "",
+        max: "",
+        searchText: "",
+    });
 
     const handleChange = ({ target: { name, value } }) => {
-        setRangeValues({
-            ...{ min, max },
-            [name]: value,
-        });
+        setTimeout(() => {
+            setFilters({
+                ...filters,
+                [name]: value.toLowerCase(),
+            });
+        }, 500);
     };
+
+    let { min, max, searchText } = filters;
 
     const filterData = () => {
-        // Condition for filtering by price
-        if (min.length || max.length) {
-            filterResult.filter((book) => {
-                return book.price >= min && book.price <= max;
-            });
-        }
+        const minValue = min.length ? Number(min) : "1";
+        const maxValue = max.length ? Number(max) : "10000";
+        const search = searchText.length ? searchText : "";
 
-        // Condition for filtering by search text
-        if (searchText.length) {
-            filterResult.filter((book) => {
-                return book.title.toLowerCase().includes(searchText);
-            });
-        }
+        const result = data.filter((book) => {
+            return (
+                book.price >= minValue &&
+                book.price <= maxValue &&
+                book.title.toLowerCase().includes(search)
+            );
+        });
 
-        // here should be returned filtered array
-        return filterResult;
-    };
-
-    const handleFilterData = () => {
-        setFilterResult(filterData());
+        return result;
     };
 
     useEffect(() => {
-        handleFilterData();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [searchText, min, max]);
+        filterData();
+    });
 
     return (
         <div className="store">
@@ -57,14 +54,13 @@ const Bookstore = () => {
                 <div className="store__col1">
                     <FilterItems
                         searchText={searchText}
-                        setSearchText={setSearchText}
                         handleChange={handleChange}
                         min={min}
                         max={max}
                     />
                 </div>
                 <div className="store__col2">
-                    {filterResult.map((book) => {
+                    {filterData().map((book) => {
                         return (
                             <Book
                                 id={book.id}
