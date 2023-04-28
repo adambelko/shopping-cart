@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from "../data/data";
 
 import Book from "../components/Book";
@@ -7,22 +7,45 @@ import FilterItems from "../components/FilterItems";
 import "../styles/Bookstore.scss";
 
 const Bookstore = () => {
-    const [filterResult, setFilterResult] = useState([]);
+    const [filterResult, setFilterResult] = useState(data);
 
     const [{ min, max }, setRangeValues] = useState({ min: "", max: "" });
     const [searchText, setSearchText] = useState("");
 
-    const filteredData = data.filter((book) => {
-        if (searchText === "") return data;
-        return book.title.toLowerCase().includes(searchText);
-    });
-
     const handleChange = ({ target: { name, value } }) => {
-        setRangeValues((prevState) => ({
-            ...prevState,
+        setRangeValues({
+            ...{ min, max },
             [name]: value,
-        }));
+        });
     };
+
+    const filterData = () => {
+        // Condition for filtering by price
+        if (min.length || max.length) {
+            filterResult.filter((book) => {
+                return book.price >= min && book.price <= max;
+            });
+        }
+
+        // Condition for filtering by search text
+        if (searchText.length) {
+            filterResult.filter((book) => {
+                return book.title.toLowerCase().includes(searchText);
+            });
+        }
+
+        // here should be returned filtered array
+        return filterResult;
+    };
+
+    const handleFilterData = () => {
+        setFilterResult(filterData());
+    };
+
+    useEffect(() => {
+        handleFilterData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [searchText, min, max]);
 
     return (
         <div className="store">
@@ -41,7 +64,7 @@ const Bookstore = () => {
                     />
                 </div>
                 <div className="store__col2">
-                    {filteredData.map((book) => {
+                    {filterResult.map((book) => {
                         return (
                             <Book
                                 id={book.id}
