@@ -1,0 +1,31 @@
+.cart {
+    display: flex;
+    justify-content: center;
+    font-family: "futura-pt", sans-serif;
+    margin-top: 5em;
+    gap: 4em;           
+}
+
+.cart__section-title {
+    font-size: 1.5em;
+    padding-bottom: 0.5rem;
+}
+
+.cart__list {                            
+    display: flex;
+    flex-direction: column;                                         
+    width: 610px;         
+    ul {
+        list-style: none;
+        li {
+            display: flex;
+            flex-direction: column;
+        }                                          
+    }
+}
+
+.cart__order-summary {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}

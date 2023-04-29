@@ -1,0 +1,47 @@
+$dark-blue: #0D345A;
+
+.cart__book {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0;
+    a {
+        display: flex;
+        text-decoration: none;
+        color: $dark-blue;
+    }
+    
+    img {                                                      
+        max-width: 100px;
+        border: 1px solid #D6DAE1;
+    }                                                                                        
+                   
+    .book__left-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 1.1rem;
+        padding-left: 1em;
+        
+        .book__quantity-wrapper {
+            input {
+                width: 80px;
+                height: 30px;
+            }                                                                                                                                       
+        }         
+    }                                                                         
+
+    .book__right-wrapper {
+        display: flex;
+
+        .book__total-price {
+            font-size: 1.3rem;
+            padding: 0 1.5em;
+        }
+
+        .book__remove-icon {
+            width: 30px;
+            cursor: pointer;;
+        }
+    }
+
+}

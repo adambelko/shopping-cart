@@ -18,11 +18,13 @@ const Header = ({ scrollDown }) => {
                 </Link>
                 <div className="header__menu">
                     <Navigation scrollDown={scrollDown} />
-                    <div className="header__cart-wrapper">
-                        <MdOutlineShoppingCart size="30px" />
-                        <div className="cart-badge">1</div>
-                    </div>
-                    <MobileNavigation />
+                    <Link to="cart">
+                        <div className="header__cart-wrapper">
+                            <MdOutlineShoppingCart size="30px" />
+                            <div className="cart-badge">1</div>
+                        </div>
+                        <MobileNavigation />
+                    </Link>
                 </div>
             </div>
         </header>

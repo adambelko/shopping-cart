@@ -6,6 +6,7 @@ import Bookstore from "../pages/Bookstore";
 import About from "../pages/About";
 import NotFound from "./NotFound";
 import BookDetails from "./BookDetails";
+import Cart from "./Cart/Cart";
 
 const Main = ({ events }) => {
     return (
@@ -21,6 +22,7 @@ const Main = ({ events }) => {
                     <Route path=":id" element={<BookDetails />} />
                 </Route>
                 <Route path="/about" element={<About />} />
+                <Route path="/cart" element={<Cart />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </main>
