@@ -23,9 +23,17 @@ $dark-blue: #0D345A;
         padding-left: 1em;
         
         .book__quantity-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 28px;
+            border: 1px solid $dark-blue;
             input {
-                width: 80px;
-                height: 30px;
+                text-align: center;
+                width: 38px;
+                height: 16px;
+                border: none;
             }                                                                                                                                       
         }         
     }                                                                         
@@ -39,9 +47,9 @@ $dark-blue: #0D345A;
         }
 
         .book__remove-icon {
+            margin-top: 0.2em;
             width: 30px;
             cursor: pointer;;
         }
     }
-
 }
