@@ -13,7 +13,7 @@ const FilterItems = (props) => {
 
     return (
         <div className="store__filter">
-            <div className="store__filter-title">Search by</div>
+            <div className="store__filter-title">Filter by</div>
             <button className="store__filter-btn" onClick={togglePriceFilter}>
                 Price
                 {priceFilterOpen ? <RxMinus /> : <FiPlus />}
@@ -26,9 +26,8 @@ const FilterItems = (props) => {
                                 className="store__filter-price-min"
                                 type="text"
                                 name="min"
-                                value={props.min}
                                 onChange={props.handleChange}
-                                placeholder="MIN"
+                                placeholder="Min"
                                 required
                             />
                             <p className="store__filter-price-separator">to</p>
@@ -36,9 +35,8 @@ const FilterItems = (props) => {
                                 className="store__filter-price-max"
                                 type="text"
                                 name="max"
-                                value={props.max}
                                 onChange={props.handleChange}
-                                placeholder="MAX"
+                                placeholder="Max"
                                 required
                             />
                         </div>
