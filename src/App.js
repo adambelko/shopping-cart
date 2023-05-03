@@ -9,12 +9,25 @@ function App() {
     const events = useRef(null);
     const [cart, setCart] = useState([]);
 
-    const addToCart = (id) => {
-        const itemToAdd = data.find((book) => book.id === id);
-        const existingItem = cart.find((book) => book.id === id);
+    const addToCart = (id, quantity) => {
+        const itemToAdd = data.find((item) => item.id === id);
+        const existingItem = cart.find((item) => item.id === id);
         if (existingItem) return cart;
-        setCart([...cart, itemToAdd]);
+        setCart([...cart, { ...itemToAdd, quantity: quantity }]);
     };
+
+    const removeFromCart = (id) => {
+        const filteredList = cart.filter((item) => item.id !== id);
+        setCart(filteredList);
+    };
+
+    const updateItemQuantity = (quantity, id) => {
+        const updatedQuantity = cart.map((item) =>
+            item.id === id ? { ...item, quantity: quantity } : item
+        );
+        setCart(updatedQuantity);
+    };
+    console.log(cart);
 
     const scrollDown = () => {
         window.scrollTo({
@@ -26,7 +39,13 @@ function App() {
     return (
         <div>
             <Header scrollDown={scrollDown} cart={cart} />
-            <Main events={events} addToCart={addToCart} cart={cart} />
+            <Main
+                events={events}
+                cart={cart}
+                updateItemQuantity={updateItemQuantity}
+                addToCart={addToCart}
+                removeFromCart={removeFromCart}
+            />
             <Footer />
         </div>
     );

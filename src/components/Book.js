@@ -15,7 +15,7 @@ const Book = (props) => {
             </Link>
             <button
                 className="book-btn"
-                onClick={() => props.addToCart(props.id)}
+                onClick={() => props.addToCart(props.id, 1)}
             >
                 Add to Cart
             </button>

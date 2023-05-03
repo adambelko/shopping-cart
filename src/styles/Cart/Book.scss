@@ -2,7 +2,7 @@ $dark-blue: #0D345A;
 
 .cart__book {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     padding: 2em 0;
     a {
         display: flex;
@@ -21,7 +21,10 @@ $dark-blue: #0D345A;
         justify-content: space-evenly;
         font-size: 1.1rem;
         padding-left: 1em;
-        
+        a {
+            display: flex;
+            flex-direction: column;
+        }
         .book__quantity-wrapper {
             display: flex;
             align-items: center;
@@ -29,17 +32,25 @@ $dark-blue: #0D345A;
             width: 80px;
             height: 28px;
             border: 1px solid $dark-blue;
+            
             input {
                 text-align: center;
                 width: 38px;
                 height: 16px;
                 border: none;
-            }                                                                                                                                       
+            }
+            
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+
         }         
     }                                                                         
 
     .book__right-wrapper {
         display: flex;
+        margin-left: auto;
 
         .book__total-price {
             font-size: 1.3rem;

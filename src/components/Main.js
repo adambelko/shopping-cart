@@ -30,11 +30,25 @@ const Main = (props) => {
                     />
                     <Route
                         path=":id"
-                        element={<BookDetails addToCart={props.addToCart} />}
+                        element={
+                            <BookDetails
+                                addToCart={props.addToCart}
+                                updateItemQuantity={props.updateItemQuantity}
+                            />
+                        }
                     />
                 </Route>
                 <Route path="/about" element={<About />} />
-                <Route path="/cart" element={<Cart cart={props.cart} />} />
+                <Route
+                    path="/cart"
+                    element={
+                        <Cart
+                            cart={props.cart}
+                            updateItemQuantity={props.updateItemQuantity}
+                            removeFromCart={props.removeFromCart}
+                        />
+                    }
+                />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </main>

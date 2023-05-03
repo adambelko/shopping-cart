@@ -4,7 +4,7 @@ import Book from "./Book";
 
 import "../../styles/Cart/Cart.scss";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, removeFromCart, updateItemQuantity }) => {
     const [promoIsOpen, setPromoIsOpen] = useState(false);
     return (
         <div className="cart">
@@ -16,10 +16,14 @@ const Cart = ({ cart }) => {
                         cart.map((book) => (
                             <li key={book.id}>
                                 <Book
+                                    id={book.id}
                                     source={book.img}
                                     altName={book.title}
                                     title={book.title}
                                     price={book.price}
+                                    quantity={book.quantity}
+                                    removeFromCart={removeFromCart}
+                                    updateItemQuantity={updateItemQuantity}
                                 />
                             </li>
                         ))

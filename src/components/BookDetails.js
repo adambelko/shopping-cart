@@ -1,11 +1,19 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import data from "../data/data";
 
 import "../styles/BookDetails.scss";
 
-const BookDetails = ({ addToCart }) => {
+const BookDetails = ({ addToCart, updateItemQuantity }) => {
     const { id } = useParams();
+    const [quantity, setQuantity] = useState(1);
+
+    const handleChangeQuantity = (e, id) => {
+        const newQuantity = e.target.value;
+        updateItemQuantity(newQuantity, id);
+        setQuantity(newQuantity);
+    };
 
     const bookInfo = data.filter((book) => book.id === id);
 
@@ -51,13 +59,18 @@ const BookDetails = ({ addToCart }) => {
                                         <input
                                             type="number"
                                             defaultValue="1"
+                                            min="0"
+                                            max="100"
                                             id="quantity"
+                                            onChange={(e) =>
+                                                handleChangeQuantity(e, book.id)
+                                            }
                                         />
                                     </div>
                                     <button
                                         className="book-details__add-btn"
                                         type="button"
-                                        onClick={() => addToCart(id)}
+                                        onClick={() => addToCart(id, quantity)}
                                     >
                                         Add to Cart
                                     </button>
