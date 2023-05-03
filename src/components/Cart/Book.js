@@ -15,8 +15,8 @@ const Book = (props) => {
                     alt={props.altName}
                 />
                 <div className="book__left-wrapper">
-                    <span className="book__title">{props.bookTitle}</span>
-                    <span className="book__price">${props.bookPrice}</span>
+                    <span className="book__title">{props.title}</span>
+                    <span className="book__price">${props.price}</span>
                     <div className="book__quantity-wrapper">
                         <HiOutlineMinusSm />
                         <input type="text" defaultValue="1" />
@@ -25,7 +25,7 @@ const Book = (props) => {
                 </div>
             </Link>
             <div className="book__right-wrapper">
-                <div className="book__total-price">$50</div>
+                <div className="book__total-price">{props.price}</div>
                 <div className="book__remove-icon">
                     <RxCross2 size={"22px"} />
                 </div>

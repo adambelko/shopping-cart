@@ -2,11 +2,9 @@ import { useState } from "react";
 import { CiShoppingTag } from "react-icons/ci";
 import Book from "./Book";
 
-import chairs from "../../assets/images/Books/99-Chairs.webp";
-
 import "../../styles/Cart/Cart.scss";
 
-const Cart = () => {
+const Cart = ({ cart }) => {
     const [promoIsOpen, setPromoIsOpen] = useState(false);
     return (
         <div className="cart">
@@ -14,19 +12,22 @@ const Cart = () => {
                 <div className="cart__section-title">My Cart</div>
                 <hr />
                 <ul className="cart__products">
-                    <li>
-                        <Book
-                            bookTitle={"Hiking in the Alps"}
-                            source={chairs}
-                            bookPrice={20}
-                        />
-                        <hr />
-                        <Book
-                            bookTitle={"test"}
-                            source={chairs}
-                            bookPrice={20}
-                        />
-                    </li>
+                    {cart.length ? (
+                        cart.map((book) => (
+                            <li key={book.id}>
+                                <Book
+                                    source={book.img}
+                                    altName={book.title}
+                                    title={book.title}
+                                    price={book.price}
+                                />
+                            </li>
+                        ))
+                    ) : (
+                        <li className="cart__products-none">
+                            Your cart is empty
+                        </li>
+                    )}
                 </ul>
                 <hr />
                 <div className="cart__promo-code">

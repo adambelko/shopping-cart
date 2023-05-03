@@ -7,7 +7,7 @@ import FilterItems from "../components/FilterItems";
 
 import "../styles/Bookstore.scss";
 
-const Bookstore = () => {
+const Bookstore = ({ addToCart }) => {
     const [filters, setFilters] = useState({
         min: "",
         max: "",
@@ -61,6 +61,7 @@ const Bookstore = () => {
                                       altName={book.title}
                                       title={book.title}
                                       price={book.price}
+                                      addToCart={addToCart}
                                   />
                               );
                           })

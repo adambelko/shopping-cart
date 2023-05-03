@@ -4,7 +4,7 @@ import data from "../data/data";
 
 import "../styles/BookDetails.scss";
 
-const BookDetails = () => {
+const BookDetails = ({ addToCart }) => {
     const { id } = useParams();
 
     const bookInfo = data.filter((book) => book.id === id);
@@ -57,6 +57,7 @@ const BookDetails = () => {
                                     <button
                                         className="book-details__add-btn"
                                         type="button"
+                                        onClick={() => addToCart(id)}
                                     >
                                         Add to Cart
                                     </button>

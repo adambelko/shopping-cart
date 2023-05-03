@@ -8,21 +8,33 @@ import NotFound from "./NotFound";
 import BookDetails from "./BookDetails";
 import Cart from "./Cart/Cart";
 
-const Main = ({ events }) => {
+const Main = (props) => {
     return (
         <main>
             <ScrollToTop smooth={true} />
             <Routes>
                 <Route path="/">
-                    <Route index element={<Home />} />
-                    <Route path="/events" element={<Home events={events} />} />
+                    <Route
+                        index
+                        element={<Home addToCart={props.addToCart} />}
+                    />
+                    <Route
+                        path="/events"
+                        element={<Home events={props.events} />}
+                    />
                 </Route>
                 <Route path="/bookstore">
-                    <Route index element={<Bookstore />} />
-                    <Route path=":id" element={<BookDetails />} />
+                    <Route
+                        index
+                        element={<Bookstore addToCart={props.addToCart} />}
+                    />
+                    <Route
+                        path=":id"
+                        element={<BookDetails addToCart={props.addToCart} />}
+                    />
                 </Route>
                 <Route path="/about" element={<About />} />
-                <Route path="/cart" element={<Cart />} />
+                <Route path="/cart" element={<Cart cart={props.cart} />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </main>

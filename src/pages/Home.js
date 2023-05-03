@@ -1,4 +1,3 @@
-import data from "../data/data";
 import sofa from "../assets/images/sofa.webp";
 import ailoo from "../assets/images/Books/Ailoo.webp";
 
@@ -6,7 +5,7 @@ import GallerySlider from "../components/GallerySlider";
 
 import "../styles/Home.scss";
 
-const Home = ({ events }) => {
+const Home = (props) => {
     return (
         <div className="home">
             <section className="home__img-wrapper">
@@ -32,7 +31,7 @@ const Home = ({ events }) => {
                 <div className="gallery__wrapper">
                     <div className="gallery__bestsellers-wrapper">
                         <div className="gallery__bestsellers">
-                            <GallerySlider gallery={data} />
+                            <GallerySlider addToCart={props.addToCart} />
                         </div>
                     </div>
                     <div className="gallery__title title recommended-books">
@@ -40,7 +39,7 @@ const Home = ({ events }) => {
                         <h2>RECOMMENDED BOOKS</h2>
                     </div>
                     <div className="gallery-recommended">
-                        <GallerySlider gallery={data} />
+                        <GallerySlider addToCart={props.addToCart} />
                     </div>
                     <div className="gallery__title title gallery-outro">
                         <h2>
@@ -54,7 +53,7 @@ const Home = ({ events }) => {
                 </div>
             </section>
 
-            <section className="book-launch" ref={events}>
+            <section className="book-launch" ref={props.events}>
                 <div className="book-launch__title title">
                     <span>Coming Up</span>
                     <h2>BOOK LAUNCH</h2>

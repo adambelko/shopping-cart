@@ -6,7 +6,7 @@ import Navigation from "./Navbar/Navigation";
 
 import "../styles/Header.scss";
 
-const Header = ({ scrollDown }) => {
+const Header = (props) => {
     return (
         <header>
             <div className="header__wrapper">
@@ -17,11 +17,13 @@ const Header = ({ scrollDown }) => {
                     </h1>
                 </Link>
                 <div className="header__menu">
-                    <Navigation scrollDown={scrollDown} />
+                    <Navigation scrollDown={props.scrollDown} />
                     <Link to="cart">
                         <div className="header__cart-wrapper">
                             <MdOutlineShoppingCart size="30px" />
-                            <div className="cart-badge">1</div>
+                            <div className="cart-badge">
+                                {props.cart.length}
+                            </div>
                         </div>
                         <MobileNavigation />
                     </Link>
