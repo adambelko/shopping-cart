@@ -86,8 +86,12 @@ $dark-blue: #0D345A;
             color: $white;
             transition: all 200ms ease-in-out;
             border-style: none;
+            cursor: pointer;
         }
     
+        a .book-details__buy-btn {
+            width: 100%;
+        }
     
         .book-details__add-btn {
             background-color: $dark-blue;

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import sofa from "../assets/images/sofa.webp";
 import ailoo from "../assets/images/Books/Ailoo.webp";
 
@@ -25,7 +26,7 @@ const Home = (props) => {
 
             <section className="gallery">
                 <div className="gallery__title title">
-                    <span>BOOK ADDICTS</span>
+                    <span>PAGE TURNERS</span>
                     <h2>BESTSELLERS</h2>
                 </div>
                 <div className="gallery__wrapper">
@@ -47,7 +48,7 @@ const Home = (props) => {
                             MANY BOOKS
                         </h2>
                         <button>
-                            <a href="/About">Read Our Story</a>
+                            <Link to="/about">Read Our Story</Link>
                         </button>
                     </div>
                 </div>

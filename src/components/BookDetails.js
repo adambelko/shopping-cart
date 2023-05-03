@@ -74,12 +74,17 @@ const BookDetails = ({ addToCart, updateItemQuantity }) => {
                                     >
                                         Add to Cart
                                     </button>
-                                    <button
-                                        className="book-details__buy-btn"
-                                        type="button"
-                                    >
-                                        Buy Now
-                                    </button>
+                                    <Link to="/cart">
+                                        <button
+                                            className="book-details__buy-btn"
+                                            type="button"
+                                            onClick={() =>
+                                                addToCart(id, quantity)
+                                            }
+                                        >
+                                            Buy Now
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
