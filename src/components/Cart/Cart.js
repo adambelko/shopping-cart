@@ -1,11 +1,20 @@
 import { useState } from "react";
 import { CiShoppingTag } from "react-icons/ci";
+
 import Book from "./Book";
 
 import "../../styles/Cart/Cart.scss";
 
 const Cart = ({ cart, removeFromCart, updateItemQuantity }) => {
     const [promoIsOpen, setPromoIsOpen] = useState(false);
+
+    const amount = (item) => item.price * item.quantity;
+    const sum = (prev, next) => prev + next;
+
+    const subTotal = () => (cart.length ? cart.map(amount).reduce(sum) : 0);
+    const shippingFee = () => (cart.length ? 8.5 : 0);
+    const totalPrice = () => subTotal() + shippingFee();
+
     return (
         <div className="cart">
             <div className="cart__list">
@@ -62,18 +71,18 @@ const Cart = ({ cart, removeFromCart, updateItemQuantity }) => {
                 <div className="cart__summary-subtotal">
                     <dl>
                         <dt>Subtotal</dt>
-                        <dd>$44</dd>
+                        <dd>${subTotal().toFixed(2)}</dd>
                     </dl>
                     <div className="cart__summary-shipping">
-                        <span>Flat Rate Shipping</span>
-                        <span>$8.50</span>
+                        <span>Shipping fee</span>
+                        <span>${shippingFee().toFixed(2)}</span>
                     </div>
                 </div>
                 <hr />
                 <div className="cart__summary-total">
                     <dl>
                         <dt>Total</dt>
-                        <dd>$65</dd>
+                        <dd>${totalPrice().toFixed(2)}</dd>
                     </dl>
                     <button className="cart__checkout-btn" type="button">
                         Checkout

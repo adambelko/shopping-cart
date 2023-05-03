@@ -10,7 +10,7 @@ const BookDetails = ({ addToCart, updateItemQuantity }) => {
     const [quantity, setQuantity] = useState(1);
 
     const handleChangeQuantity = (e, id) => {
-        const newQuantity = e.target.value;
+        const newQuantity = parseInt(e.target.value);
         updateItemQuantity(newQuantity, id);
         setQuantity(newQuantity);
     };
@@ -59,7 +59,7 @@ const BookDetails = ({ addToCart, updateItemQuantity }) => {
                                         <input
                                             type="number"
                                             defaultValue="1"
-                                            min="0"
+                                            min="1"
                                             max="100"
                                             id="quantity"
                                             onChange={(e) =>
