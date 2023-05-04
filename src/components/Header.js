@@ -25,8 +25,8 @@ const Header = (props) => {
                                 {props.cart.length}
                             </div>
                         </div>
-                        <MobileNavigation />
                     </Link>
+                    <MobileNavigation scrollDown={props.scrollDown} />
                 </div>
             </div>
         </header>

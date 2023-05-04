@@ -5,8 +5,9 @@ import Navlinks from "./Navlinks";
 
 import "../../styles/MobileNavigation.scss";
 
-const MobileNavigation = () => {
+const MobileNavigation = ({ scrollDown }) => {
     const [openMenu, setOpenMenu] = useState(false);
+    const closeMobileMenu = () => setOpenMenu(false);
 
     const menuIcon = (
         <GiHamburgerMenu
@@ -24,13 +25,15 @@ const MobileNavigation = () => {
         />
     );
 
-    const closeMobileMenu = () => setOpenMenu(false);
-
     return (
         <nav className="mobile-navigation">
             {openMenu ? closeIcon : menuIcon}
             {openMenu && (
-                <Navlinks isMobile={true} closeMobileMenu={closeMobileMenu} />
+                <Navlinks
+                    isMobile={true}
+                    closeMobileMenu={closeMobileMenu}
+                    scrollDown={scrollDown}
+                />
             )}
         </nav>
     );
