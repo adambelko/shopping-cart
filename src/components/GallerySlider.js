@@ -33,7 +33,6 @@ const GallerySlider = (props) => {
 
     return (
         <div>
-            {/* {windowWidth.current} */}
             <Slider {...settings}>
                 {props.data.map((book) => {
                     return (

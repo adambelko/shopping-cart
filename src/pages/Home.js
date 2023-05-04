@@ -27,7 +27,7 @@ const Home = (props) => {
             </section>
 
             <section className="gallery">
-                <div className="gallery__title title">
+                <div className="gallery__title title home__bestsellers-title-wrapper">
                     <span>PAGE TURNERS</span>
                     <h2>BESTSELLERS</h2>
                 </div>
@@ -44,14 +44,14 @@ const Home = (props) => {
                         <span>This Month's</span>
                         <h2>RECOMMENDED BOOKS</h2>
                     </div>
-                    <div className="gallery-recommended">
+                    <div className="gallery__recommended">
                         <GallerySlider
                             addToCart={props.addToCart}
                             data={data}
                         />
                     </div>
-                    <div className="gallery__title title gallery-outro">
-                        <h2>
+                    <div className="gallery__title title gallery__outro">
+                        <h2 className="gallery__outro-title">
                             THERE'S NO <br /> SUCH THING AS TOO <br />
                             MANY BOOKS
                         </h2>

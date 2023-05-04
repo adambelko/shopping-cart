@@ -5,19 +5,21 @@ $light-blue: #A9BFD6;
 .footer {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    // width: 100%;
     align-items: center;
     margin: auto;
     // position: absolute;
     // bottom: 0;
-    padding: 3em 0;
+    padding: 3em 3em;
     color: white;
     background: $dark-blue;
 	font-family: "futura-pt", sans-serif;
 
     &__column-wrapper {
         display: flex;
-        gap: 10em;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 700px;
 
         .column {
             display: flex;
@@ -46,5 +48,18 @@ $light-blue: #A9BFD6;
                 color: $light-blue;
             }
         }
+    }
+}
+
+@media (max-width: 675px) {
+    .footer {
+        font-size: 0.9rem;
+        padding: 2em 1.5em;
+    }
+    
+    .footer__column-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;    
     }
 }
