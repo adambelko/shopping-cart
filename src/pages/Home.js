@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import data from "../data/data";
 import sofa from "../assets/images/sofa.webp";
 import ailoo from "../assets/images/Books/Ailoo.webp";
 
@@ -7,6 +8,7 @@ import GallerySlider from "../components/GallerySlider";
 import "../styles/Home.scss";
 
 const Home = (props) => {
+    const bestsellers = data.slice(7, -1);
     return (
         <div className="home">
             <section className="home__img-wrapper">
@@ -32,7 +34,10 @@ const Home = (props) => {
                 <div className="gallery__wrapper">
                     <div className="gallery__bestsellers-wrapper">
                         <div className="gallery__bestsellers">
-                            <GallerySlider addToCart={props.addToCart} />
+                            <GallerySlider
+                                addToCart={props.addToCart}
+                                data={bestsellers}
+                            />
                         </div>
                     </div>
                     <div className="gallery__title title recommended-books">
@@ -40,7 +45,10 @@ const Home = (props) => {
                         <h2>RECOMMENDED BOOKS</h2>
                     </div>
                     <div className="gallery-recommended">
-                        <GallerySlider addToCart={props.addToCart} />
+                        <GallerySlider
+                            addToCart={props.addToCart}
+                            data={data}
+                        />
                     </div>
                     <div className="gallery__title title gallery-outro">
                         <h2>

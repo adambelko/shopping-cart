@@ -1,24 +1,41 @@
-import data from "../data/data";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Book from "./Book";
+import { useEffect, useState } from "react";
 
 const GallerySlider = (props) => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleWindowResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleWindowResize);
+
+        return () => {
+            window.removeEventListener("resize", handleWindowResize);
+        };
+    }, []);
+
     const settings = {
         infinite: true,
         slidesToShow: 6,
         speed: 500,
     };
 
-    const shuffeledGallery = data.sort(() => 0.5 - Math.random());
+    if (windowWidth < 676) {
+        settings.slidesToShow = 1;
+    }
 
     return (
         <div>
+            {/* {windowWidth.current} */}
             <Slider {...settings}>
-                {shuffeledGallery.map((book) => {
+                {props.data.map((book) => {
                     return (
                         <Book
                             id={book.id}
