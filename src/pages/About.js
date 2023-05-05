@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div className="about-page">
             <div className="about-page__title title">
-                <span>Our</span>
+                <span>My</span>
                 <h2>STORY</h2>
             </div>
             <div className="about-page__underlay">
@@ -18,7 +18,8 @@ const About = () => {
                         />
                         <div className="about-page__text-wrapper">
                             <p>
-                                Hey! My name is Adam Belko and as a Front End
+                                Hey, no the lady in the image above is not me!
+                                My name is Adam Belko and as a Front End
                                 Developer I specialize in developing user
                                 interfaces and experiences for websites and
                                 applications. With a strong command of HTML,

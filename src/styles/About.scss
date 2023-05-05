@@ -35,6 +35,7 @@ $dark-blue: #0D345A;
 
             .about-page__img {
                 margin: auto;
+                width: 100%;
                 max-width: 850px;
                 object-fit: cover;
             }
@@ -58,6 +59,60 @@ $dark-blue: #0D345A;
 }
 
 @media (max-width: 675px) {
-
-
+    .about-page {
+        .about-page__underlay {
+            height: auto;
+            margin-top: 3em;
+            // margin-bottom: 38em;
+            position: relative;
+            background-color: white;
+        }
+    
+        .about-page__img-wrapper {
+            position: static;
+            &-two {
+                border: none;
+                margin: 0;
+                max-width: 100%;
+    
+                .about-page__img {
+                    max-width: 100%;
+                }
+    
+            }
+        }
+        
+        .about-page__img-wrapper-two .about-page__text-wrapper {
+            position: static;
+            padding: 2em;
+            justify-content: center;
+            border: none;
+        }
+    }
 }
+
+
+
+
+// .about-page {
+//     .about-page__title {
+//         h2 {
+//             font-size: 2.2rem;
+//         }
+//     }
+
+//     .about-page__underlay {
+//         height: 0;
+
+//         .about-page__img-wrapper {
+//             img {
+//                 width: 100%;
+//                 object-fit: contain;
+//             }
+//             .about-page__text-wrapper {
+//                 // position: relative;
+//             }
+//         }
+//     }
+
+// }
