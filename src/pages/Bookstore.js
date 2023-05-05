@@ -47,10 +47,10 @@ const Bookstore = ({ addToCart }) => {
                 <h2>BOOKSTORE</h2>
             </div>
             <div className="store__wrapper">
-                <div className="store__col1">
+                <div className="store__filter-section">
                     <FilterItems handleChange={debounceHandleChange} />
                 </div>
-                <div className="store__col2">
+                <div className="store__gallery-section">
                     {filteredList.length
                         ? filteredList.map((book) => {
                               return (

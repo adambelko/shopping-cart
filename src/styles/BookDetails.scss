@@ -110,6 +110,16 @@ $dark-blue: #0D345A;
             }
         }
     }
-
 }
 
+@media (max-width: 675px) {
+    .book-details__wrapper {
+        flex-direction: column;
+        align-items: center;
+        
+        .book-details__col2 {
+            width: 100%;
+            max-width: 500px;
+        }
+    }
+}

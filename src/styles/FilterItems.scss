@@ -50,3 +50,34 @@
         padding: 0.2rem;
     }
 }
+
+@media (max-width: 675px) {
+    .store__filter {
+        width: 100%;
+        max-width: 100%;
+
+        .store__filter-title {
+            display: none;
+        }
+
+        .store__filter-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 0.5em;
+        
+            .store__filter-price {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .store__filter-search-section{
+                display: flex;
+                flex-direction: column;
+                    input{
+                        max-width: 150px;
+                    } 
+            }
+        }
+
+    }
+}
