@@ -2,7 +2,6 @@ $dark-blue: #0D345A;
 
 .cart__book {
     display: flex;
-    // justify-content: space-between;
     padding: 2em 0;
     a {
         display: flex;
@@ -21,10 +20,13 @@ $dark-blue: #0D345A;
         justify-content: space-evenly;
         font-size: 1.1rem;
         padding-left: 1em;
+        min-width: 100px;
+
         a {
             display: flex;
             flex-direction: column;
         }
+
         .book__quantity-wrapper {
             display: flex;
             align-items: center;

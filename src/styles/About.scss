@@ -63,7 +63,6 @@ $dark-blue: #0D345A;
         .about-page__underlay {
             height: auto;
             margin-top: 3em;
-            // margin-bottom: 38em;
             position: relative;
             background-color: white;
         }
@@ -90,29 +89,3 @@ $dark-blue: #0D345A;
         }
     }
 }
-
-
-
-
-// .about-page {
-//     .about-page__title {
-//         h2 {
-//             font-size: 2.2rem;
-//         }
-//     }
-
-//     .about-page__underlay {
-//         height: 0;
-
-//         .about-page__img-wrapper {
-//             img {
-//                 width: 100%;
-//                 object-fit: contain;
-//             }
-//             .about-page__text-wrapper {
-//                 // position: relative;
-//             }
-//         }
-//     }
-
-// }

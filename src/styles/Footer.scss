@@ -5,11 +5,7 @@ $light-blue: #A9BFD6;
 .footer {
     display: flex;
     flex-direction: column;
-    // width: 100%;
     align-items: center;
-    margin: auto;
-    // position: absolute;
-    // bottom: 0;
     padding: 3em 3em;
     color: white;
     background: $dark-blue;
@@ -58,8 +54,6 @@ $light-blue: #A9BFD6;
     }
     
     .footer__column-wrapper {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;    
+        min-width: 330px;
     }
 }

@@ -37,7 +37,7 @@ function App() {
     };
 
     return (
-        <div>
+        <div className="root">
             <Header scrollDown={scrollDown} cart={cart} />
             <Main
                 events={events}

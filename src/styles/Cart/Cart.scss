@@ -5,6 +5,7 @@ $dark-blue: #0D345A;
     display: flex;
     justify-content: center;
     font-family: "futura-pt", sans-serif;
+    margin: auto;
     margin-top: 5em;
     margin-bottom: 10em;
     gap: 4em;
@@ -26,7 +27,9 @@ $dark-blue: #0D345A;
 .cart__list {                            
     display: flex;
     flex-direction: column;                                         
-    width: 610px;         
+    width: 40%;
+    min-width: 350px;
+
     ul {
         list-style: none;
         li {
@@ -72,6 +75,7 @@ $dark-blue: #0D345A;
     display: flex;
     flex-direction: column;
     width: 280px;
+    min-width: 200px;
 
     .cart__summary-subtotal {
         margin-top: 2em;
@@ -114,5 +118,18 @@ $dark-blue: #0D345A;
                 background-color: #647790;
             }
         }
+    }
+}
+
+@media (max-width: 675px) {
+    .cart {
+        flex-direction: column;
+
+        .cart__list,
+        .cart__order-summary {
+            width: 90%;
+            margin: auto;
+        }
+
     }
 }
