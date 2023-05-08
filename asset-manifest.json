@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.c0c3c65d.css",
+    "main.js": "/shopping-cart/static/js/main.ff12f61c.js",
+    "static/media/sofa.webp": "/shopping-cart/static/media/sofa.c25d1f2ea9e112fd54bf.webp",
+    "static/media/Vegetarian-Child.webp": "/shopping-cart/static/media/Vegetarian-Child.d0f1e015c3ec2bd9c207.webp",
+    "static/media/Coctails-The-Ultimate-Guide.webp": "/shopping-cart/static/media/Coctails-The-Ultimate-Guide.e4cc1072dc92c2fb1b5a.webp",
+    "static/media/Hiking-in-the-Alps.webp": "/shopping-cart/static/media/Hiking-in-the-Alps.fdac210ebec21c933f85.webp",
+    "static/media/Khalo.webp": "/shopping-cart/static/media/Khalo.ca84c67cbe19e8412cd9.webp",
+    "static/media/Looking-for-Nini.webp": "/shopping-cart/static/media/Looking-for-Nini.bf74f2010db0328e10aa.webp",
+    "static/media/AboutPageImg.webp": "/shopping-cart/static/media/AboutPageImg.62c0760ed86f89ca4fd7.webp",
+    "static/media/Interior-Design.webp": "/shopping-cart/static/media/Interior-Design.a5b7affd92e4971ccd41.webp",
+    "static/media/The-Sahara.webp": "/shopping-cart/static/media/The-Sahara.2c2a590df92e4f71182f.webp",
+    "static/media/Origami.webp": "/shopping-cart/static/media/Origami.f73f56a0853b7ab05617.webp",
+    "static/media/Waited-Long-Enough.webp": "/shopping-cart/static/media/Waited-Long-Enough.51c9d3ac12a60da62402.webp",
+    "static/media/Healing-Herbs.webp": "/shopping-cart/static/media/Healing-Herbs.e62b8f558155a03b3266.webp",
+    "static/media/Spoken-Word.webp": "/shopping-cart/static/media/Spoken-Word.f9d688047681bf4c7176.webp",
+    "static/media/Picasso-Sketches-and-Untold-Truths.webp": "/shopping-cart/static/media/Picasso-Sketches-and-Untold-Truths.67cd1c2041f4f40f4d4d.webp",
+    "static/media/99-Chairs.webp": "/shopping-cart/static/media/99-Chairs.51aae9f2670ad09b88b3.webp",
+    "static/media/Ailoo.webp": "/shopping-cart/static/media/Ailoo.d5ec599c4c3a1d68afd7.webp",
+    "static/media/Youre-not-a-Hoarder.webp": "/shopping-cart/static/media/Youre-not-a-Hoarder.4101cafb388892b40b56.webp",
+    "static/media/The-Missing-C.webp": "/shopping-cart/static/media/The-Missing-C.1679587ead1ff3272b97.webp",
+    "static/media/slick.svg": "/shopping-cart/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/shopping-cart/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/shopping-cart/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/shopping-cart/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/shopping-cart/index.html",
+    "main.c0c3c65d.css.map": "/shopping-cart/static/css/main.c0c3c65d.css.map",
+    "main.ff12f61c.js.map": "/shopping-cart/static/js/main.ff12f61c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0c3c65d.css",
+    "static/js/main.ff12f61c.js"
+  ]
+}
