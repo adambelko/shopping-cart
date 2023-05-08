@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.c0c3c65d.css",
-    "main.js": "/shopping-cart/static/js/main.ff12f61c.js",
+    "main.js": "/shopping-cart/static/js/main.b0e267c2.js",
     "static/media/sofa.webp": "/shopping-cart/static/media/sofa.c25d1f2ea9e112fd54bf.webp",
     "static/media/Vegetarian-Child.webp": "/shopping-cart/static/media/Vegetarian-Child.d0f1e015c3ec2bd9c207.webp",
     "static/media/Coctails-The-Ultimate-Guide.webp": "/shopping-cart/static/media/Coctails-The-Ultimate-Guide.e4cc1072dc92c2fb1b5a.webp",
@@ -26,10 +26,10 @@
     "static/media/slick.woff": "/shopping-cart/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/shopping-cart/index.html",
     "main.c0c3c65d.css.map": "/shopping-cart/static/css/main.c0c3c65d.css.map",
-    "main.ff12f61c.js.map": "/shopping-cart/static/js/main.ff12f61c.js.map"
+    "main.b0e267c2.js.map": "/shopping-cart/static/js/main.b0e267c2.js.map"
   },
   "entrypoints": [
     "static/css/main.c0c3c65d.css",
-    "static/js/main.ff12f61c.js"
+    "static/js/main.b0e267c2.js"
   ]
 }
