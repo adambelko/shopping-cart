@@ -7,5 +7,6 @@ Online bookstore that lets you easily browse books by your preferences, add them
 ## App built with:
 
 -   HTML & SASS
+-   JavaScript
 -   React
 -   React Router
