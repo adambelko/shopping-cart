@@ -4,7 +4,7 @@ import ScrollToTop from "react-scroll-to-top";
 import Home from "../pages/Home";
 import Bookstore from "../pages/Bookstore";
 import About from "../pages/About";
-import NotFound from "./NotFound";
+import NotFound from "../pages/NotFound";
 import BookDetails from "./BookDetails";
 import Cart from "./Cart/Cart";
 

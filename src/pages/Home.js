@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import data from "../data/data";
-import sofa from "../assets/images/sofa.webp";
-import ailoo from "../assets/images/Books/Ailoo.webp";
+import sofa from "../assets/images/Sofa.webp";
+import ailoo from "../assets/images/books/Ailoo.webp";
 
 import GallerySlider from "../components/GallerySlider";
 

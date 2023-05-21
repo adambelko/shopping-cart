@@ -1,21 +1,21 @@
 import { v4 as uuidv4 } from "uuid";
 import short from "short-uuid";
 
-import chairs from "../assets/images/Books/99-Chairs.webp";
-import coctails from "../assets/images/Books/Coctails-The-Ultimate-Guide.webp";
-import healingHerbs from "../assets/images/Books/Healing-Herbs.webp";
-import hikingInTheAlps from "../assets/images/Books/Hiking-in-the-Alps.webp";
-import interiorDesing from "../assets/images/Books/Interior-Design.webp";
-import khalo from "../assets/images/Books/Khalo.webp";
-import lookingForNini from "../assets/images/Books/Looking-for-Nini.webp";
-import origami from "../assets/images/Books/Origami.webp";
-import picasso from "../assets/images/Books/Picasso-Sketches-and-Untold-Truths.webp";
-import spokenWord from "../assets/images/Books/Spoken-Word.webp";
-import theMissingC from "../assets/images/Books/The-Missing-C.webp";
-import theSahara from "../assets/images/Books/The-Sahara.webp";
-import vegetarianChild from "../assets/images/Books/Vegetarian-Child.webp";
-import waitedLongEnough from "../assets/images/Books/Waited-Long-Enough.webp";
-import youreNotAHoarder from "../assets/images/Books/Youre-not-a-Hoarder.webp";
+import chairs from "../assets/images/books/99-Chairs.webp";
+import coctails from "../assets/images/books/Coctails-The-Ultimate-Guide.webp";
+import healingHerbs from "../assets/images/books/Healing-Herbs.webp";
+import hikingInTheAlps from "../assets/images/books/Hiking-in-the-Alps.webp";
+import interiorDesing from "../assets/images/books/Interior-Design.webp";
+import khalo from "../assets/images/books/Khalo.webp";
+import lookingForNini from "../assets/images/books/Looking-for-Nini.webp";
+import origami from "../assets/images/books/Origami.webp";
+import picasso from "../assets/images/books/Picasso-Sketches-and-Untold-Truths.webp";
+import spokenWord from "../assets/images/books/Spoken-Word.webp";
+import theMissingC from "../assets/images/books/The-Missing-C.webp";
+import theSahara from "../assets/images/books/The-Sahara.webp";
+import vegetarianChild from "../assets/images/books/Vegetarian-Child.webp";
+import waitedLongEnough from "../assets/images/books/Waited-Long-Enough.webp";
+import youreNotAHoarder from "../assets/images/books/Youre-not-a-Hoarder.webp";
 
 const translator = short(short.constants.flickrBase58, {
     consistentLength: false,

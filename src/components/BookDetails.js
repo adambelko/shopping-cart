@@ -24,7 +24,8 @@ const BookDetails = ({ addToCart, updateItemQuantity }) => {
                     <article key={book.id} className="book-details">
                         <div className="book-details__breadcrumbs">
                             <Link to="/">Home</Link> /
-                            <Link to="/bookstore">Bookstore</Link> / {book.name}
+                            <Link to="/bookstore"> Bookstore</Link> /{" "}
+                            {book.name}
                         </div>
                         <div className="book-details__wrapper">
                             <div className="book-details__col1">
